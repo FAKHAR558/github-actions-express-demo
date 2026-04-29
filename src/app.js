@@ -16,7 +16,7 @@ app.get("/health", (req, res) => {
 
 app.get("/config-check", (req, res) => {
   res.json({
-    environment: process.env.NODE_ENV || "development",
+    environment: process.env.NODE_ENV || "developments",
     appName: process.env.APP_NAME || "No app name found",
   });
 });
