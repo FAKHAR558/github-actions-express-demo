@@ -13,6 +13,6 @@ describe("Express App Routes", () => {
     const response = await request(app).get("/health");
 
     expect(response.statusCode).toBe(200);
-    expect(response.body.status).toBe("SUCCESS");
+    expect(response.body.status).toBe("OK");
   });
 });
