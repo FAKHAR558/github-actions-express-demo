@@ -11,6 +11,10 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
+    env:
+      NODE_ENV: test
+      APP_NAME: ${{ secrets.APP_NAME }}
+
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
@@ -30,6 +34,10 @@ jobs:
       - name: Run build
         run: npm run build
 
-env:
-  NODE_ENV: test
-  APP_NAME: ${{ secrets.APP_NAME }}
+  fake-deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fake deployment step
+        run: echo "Deploying application because tests and build passed successfully"
