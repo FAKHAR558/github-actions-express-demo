@@ -29,3 +29,7 @@ jobs:
 
       - name: Run build
         run: npm run build
+
+env:
+  NODE_ENV: test
+  APP_NAME: GitHub Actions Demo App

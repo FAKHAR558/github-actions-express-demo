@@ -15,4 +15,13 @@ describe("Express App Routes", () => {
     expect(response.statusCode).toBe(200);
     expect(response.body.status).toBe("OK");
   });
+
+  test("GET /config-check should return app configuration", async () => {
+
+  const response = await request(app).get("/config-check");
+
+  expect(response.statusCode).toBe(200);
+  expect(response.body.environment).toBe("test");
+  expect(response.body.appName).toBe("GitHub Actions Demo App");
+});
 });
