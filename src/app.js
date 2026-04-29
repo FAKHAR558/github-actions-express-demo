@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", (req, res) => {
   res.json({
-    message: "GitHub Actions Express demo is running .....",
+    message: "GitHub Actions Express demo is running",
   });
 });
 
