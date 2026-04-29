@@ -32,4 +32,4 @@ jobs:
 
 env:
   NODE_ENV: test
-  APP_NAME: GitHub Actions Demo App
+  APP_NAME: ${{ secrets.APP_NAME }}
