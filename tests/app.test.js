@@ -22,6 +22,6 @@ describe("Express App Routes", () => {
 
   expect(response.statusCode).toBe(200);
   expect(response.body.environment).toBe("test");
-  expect(response.body.appName).toBe("GitHub Actions Demo App");
+  expect(response.body.appName).toBe("GitHub Actions Demo Apps");
 });
 });
